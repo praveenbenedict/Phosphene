@@ -1,0 +1,23 @@
+{
+  "name": "quizsystem",
+  "version": "1.0.0",
+  "description": "A Quiz System using NLP",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Shadow Lord",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.3",
+    "hbs": "^4.0.1",
+    "jquery": "^3.3.1",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.2.8",
+    "morgan": "^1.9.0",
+    "string-similarity": "^1.2.1"
+  }
+}

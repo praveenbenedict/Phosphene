@@ -1,0 +1,174 @@
+input:disabled {
+    border: none;
+    border: 0px solid white;
+    background-color: transparent;
+    color: black;   
+}
+
+.navbars {
+    height: 45px;
+    color: white;
+    background-image: linear-gradient(90deg,#00c4cc 0,#7d2ae8 100%);
+}
+
+.card{
+  width: 80%;
+  margin: auto;
+  margin-top: 12px;
+  position: relative;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0;
+  transform: scale(0.95);
+  transition: box-shadow 0.5s, transform 0.5s;
+}
+
+.card:hover {
+    transform: scale(1);
+    box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.primary-buttons{
+    margin-top: 35px;
+    text-align: center;
+} 
+
+.btn {
+  border-radius: 50px;
+  margin: 5px;
+  padding: 10px;
+  width: 110px;
+  height: 50px;
+  background-color: transparent;
+  color: black;
+  border: 2px solid rgb(0, 75, 187);
+}
+
+.btn.disabled {
+  background-color: transparent;
+  border: 2px solid rgb(255, 8, 0);
+  color: black;
+}
+
+
+input.candidate-name,
+  span.candidate-placeholder,
+  label.candidate-label,
+  
+  input.question-input,
+  span.question-placeholder,
+  label.question-label
+
+  /* input.option-input,
+  span.option-placeholder,
+  label.option-label */
+  
+  {
+    font-family: 'Ubuntu', sans-serif;
+    display: block;
+    margin: 10px;
+    padding: 5px;
+    border: none;
+  }
+
+  input:focus {
+    outline: 10px;
+  }
+
+  input.candidate-name +  label,
+  input.question-input + label
+  /* input.option-input + label  */
+  {
+    display: block;
+    position: relative;
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+    width: 10%;
+    -webkit-transition: width 0.4s ease;
+    transition: width 0.4s ease;
+    height: 0px;
+  }
+
+  input.candidate-name,
+  input.question-input
+  /* input.option-input  */
+  {
+    margin: 0;
+    border: none;
+    width: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: padding-top 0.2s ease, margin-top 0.2s ease;
+    overflow-x: hidden;
+  }
+  
+  input.candidate-name:focus + label,
+  input.question-input:focus + label
+  /* input.option-input:focus + label */
+   {
+    width: 100%;
+  }
+  
+  input.candidate-name:focus,
+  input.candidate-name:valid,
+  
+  input.question-input:focus,
+  input.question-input:valid
+  
+  /* input.option-input:focus,
+  input.option-input:valid  */
+  {
+    padding-top: 35px;
+  }
+  
+  input.candidate-name:focus + label > span,
+  input.candidate-name:valid + label > span,
+  
+  input.question-input:focus + label > span,
+  input.question-input:valid + label > span
+  
+  /* input.option-input:focus + label > span,
+  input.option-input:valid + label > span */
+  {
+    top: -100px;
+    font-size: 22px;
+    color: #333;
+  }
+  
+  input.candidate-name:invalid,
+  input.question-input:invalid
+  /* input.option-input:invalid  */
+  {
+    box-shadow: none;
+  }
+  
+  input.candidate-name + label > span,
+  input.question-input + label > span {
+    font-weight: 300;
+    margin: 0;
+    position: absolute;
+    color: #8F8F8F;
+    left: 0px;
+    z-index: -1;
+    -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+    transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+  }
+
+  /* STYLES FOR candidate INPUT */
+
+  input.candidate-name{
+    font-size: 48px;
+    font-weight: 300;
+    border-radius: 2px;
+  }
+
+  input.candidate-name +  label {
+    border-top: 2px solid red;
+  }
+
+  input.candidate-name + label > span{
+    font-size: 48px;
+    top: -66px;
+  }
+
+
+ 

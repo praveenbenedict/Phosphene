@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {{!-- <title>{{quiz.quizName}}</title> --}}
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/general-css.css">
+    <link rel="stylesheet" href="assets/css/hostQuiz.css">
+</head>
+
+<body>
+
+    {{!-- <header>
+        <h2>{{quiz.quizName}}</h2>
+    </header> --}}
+
+    {{!-- <section class="vertical-align loader-area" id="loaderArea">
+        <section class="loader"></section>
+    </section> --}}
+    {{#with questions}}
+    <section class="quiz-title" data-quiz-title="{{quizTitle}}">
+
+        <h2>{{quizTitle}}</h2>
+    </section>
+    {{/with}}
+
+
+    <section id="contents">
+
+
+        <section class="questions">
+            {{#with questions}}
+            {{#each mcqQuestions}}
+            <section data-id="{{_id}}" class="question mcq-question">
+                <h3>{{question}}</h3>
+                <section class="options-container">
+                    <form>
+                        {{!-- <section class="option"> --}}
+                            {{#each options}}
+                                <input type="radio" name="mcqOption" id="">
+                                <p style="display: inline;">{{.}}</p>
+                                <br />
+                            {{/each}}
+                    </form>
+
+                    
+                </section>
+            </section>
+            {{/each}}
+
+            {{#each textQuestions}}
+            <section data-id="{{_id}}" class="question text-based-question">
+                <h3>{{question}}</h3>
+                <input type="text" name="" id="">
+            </section>
+            {{/each}}
+
+            {{/with}}
+        </section>
+
+        <button id="submitQuizButton">
+            Submit
+        </button>
+
+    </section>
+
+    <script src="/assets/script/jquery.js"></script>
+    <script src="/assets/script/bootstrap.min.js"></script>
+    <script src="/assets/script/hostQuiz.js"></script>
+</body>
+
+</html>

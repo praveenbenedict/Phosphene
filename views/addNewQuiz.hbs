@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{pageTitle}}</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/general-css.css">
+    <link rel="stylesheet" href="assets/css/createQuiz.css">
+
+</head>
+
+<body>
+
+    <section class="vertical-align loader-area" id="loaderArea">
+        <section class="loader"></section>
+    </section>
+
+    <section id="contents">
+        <section class="navbars">
+            <h3 class="vertical-align">Phosphene - Online Quizzing System</h3>
+        </section>
+
+        {{!-- <h1>{{pageTitle}}</h1> --}}
+
+        <section class="vertical-align quiz-details-container">
+            <section>
+                <input type="text" class="quiz-name" id="quizName" required autocomplete="off" />
+                <label class="quiz-label" id="quizLabel" for="quizName"><span class="quiz-placeholder">Name of the Quiz</span></label>
+            </section>
+        </section>
+
+        <section id="questions" class="question-container">
+
+        </section>
+
+        <section class="primary-buttons">
+            <button type="button" id="addNewMcqQuestionBtn" class="btn btn-primary primary-button addQnModal">
+                Add MCQ
+            </button>
+            <button type="button" id="addNewTextQuestionBtn" class="btn btn-primary primary-button addQnModal">
+                Add Text
+            </button>
+            <button type="button" class="btn btn-primary primary-button" id="submitButton">
+                Submit
+            </button>
+        </section>
+    </section>
+
+    <script src="/assets/script/jquery.js"></script>
+    <script src="/assets/script/bootstrap.min.js"></script>
+    <script src="/assets/script/createQuiz.js"></script>
+
+</body>
+
+</html>

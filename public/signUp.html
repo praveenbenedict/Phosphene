@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Shadow Chat</title>
+    <link rel="stylesheet" href="/resources/stylesheets/signup.css">
+    <link rel="shortcut icon" href="/resources/images/appicon.png" type="image/png">
+</head>
+
+<body>
+    <div id="icon"><img src="/resources/images/largeappicon.png" alt="App Icon" style="width: 150px;"></div>
+    <div id="logo"><img src="/resources/images/applogo.png" alt="App Logo"></div>
+    <div id="container">
+        <center>
+            <div id="item">
+                <form action="/post/signup" method="post" style="width: 100%;" id="form">
+                    <div id="usernamediv">
+                        <input type="text" name="username" class="inputMessage" placeholder="username" onblur="validateUsername();" id="username"
+                            pattern="[A-Za-z0-9]{8,32}"  tabindex="1"
+                            title="Enter alphabets or numbers having a minimum of 8 characters and maximum of 32 characters">
+                        
+                        </div>
+                    <div id="emaildiv">
+                        <input type="email" name="email" class="inputMessage" placeholder="E-Mail Address" 
+                        onblur="validateEmail();" tabindex="2" id="email">
+                    </div>
+                    <div id="genderdiv">
+                        <input type="text" name="gender" class="inputMessage" placeholder="Gender" 
+                        list="gender" id="gender" tabindex="3"/>
+                        <datalist id="gender">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </datalist>
+                    </div>
+                    <div id="passworddiv">
+                        <input type="password" name="password" class="inputMessage" placeholder="Password"
+                        id="password" onblur="validatePassword();" tabindex="4" />
+                    </div>
+                    <div id="repassworddiv">
+                        <input type="password" name="repassword" class="inputMessage" placeholder="Confirm password"
+                        id="repassword" onblur="validateRepassword();" tabindex="5"/>
+                    </div>
+                    <button type="button" class="inputMessage" tabindex="6" id="submit" 
+                    style="background-color: #9c27b0; color: white;cursor: pointer;">Create an Account</button>
+                </form>
+            </div>
+        </center>
+    </div>
+    <div id="footer">
+        <b>Shadow chat is a SHADOW'S Creation</b>
+        <span style="font-size: 20px;"><p>Terms and Conditions apply</p></span>
+    </div>
+    <script src="/resources/javascripts/signup.js"></script>
+</body>
+
+</html>
